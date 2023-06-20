@@ -1,0 +1,388 @@
+body {
+    background: var(--Preto);
+}
+
+header {
+    height: 100px;
+    background: var(--Footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    background: var(--Footer);
+    
+}
+
+.Logo {
+    height: 100px;
+}
+
+main {
+    height: calc(100% - 200px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Imagem {
+    min-height: 200px;
+    min-width: 250px;
+    max-height: 200px;
+    max-width: 250px;
+    border: 2px solid var(--Amarelo);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#ImagemINP {
+    position: absolute;
+    top: -1000px;
+}
+
+::placeholder {
+    color: var(--Textos);
+}
+
+#Pergunta {
+    width: 80%;
+    height: 95%;
+    text-align: center;
+    background: transparent;
+    border: none;
+    resize: none;
+}
+
+/*========================================================================================================*/
+.RespostaCard {
+    border: 1px solid var(--Preto);
+    height: 100px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Letra {
+    position: absolute;
+    left: -7px;
+    top: 35px;
+    color: var(--Textos);
+}
+
+.RespostaCard .QuadradoDaLetra {
+    position: absolute;
+    left: -34px;
+    top: 14px;
+    height: 70px;
+    width: 70px;
+    transform-origin: center;
+    transform: rotateZ(45deg);
+    z-index: -1;
+}
+
+.RespostaCard .Inp {
+    width: 445px;
+    height: 98px;
+    background: transparent;
+    border: none;
+    text-align: center;
+    resize: none;
+    overflow: hidden;
+    color: var(--Textos);
+    outline: none;
+
+}
+
+.RespostaCard.B .QuadradoDaLetra,
+.RespostaCard.D .QuadradoDaLetra {
+    left: auto;
+    right: -36px;
+    top: 14px;
+}
+.RespostaCard.B .Letra,
+.RespostaCard.D .Letra {
+    left: auto;
+    right: -7px;
+    top: 35px;
+}
+
+
+.RespostaCard.A .QuadradoDaLetra {
+    background: var(--A);
+    box-shadow:4px 6px 0 var(--A2);
+}
+
+.RespostaCard.A {
+    background: var(--A);
+    box-shadow:0 6px 0 var(--A2);
+    border-left: none;
+    padding-left: 55px;
+    margin-right: 40px;
+    border-bottom: none;
+
+}
+
+.RespostaCard.B .QuadradoDaLetra {
+    background: var(--B);
+    box-shadow: 5px 6px 0 var(--B2);
+}
+
+.RespostaCard.B {
+    background: var(--B);
+    box-shadow:0 6px 0 var(--B2);
+    border-right: none;
+    border-bottom: none;
+    padding-right: 55px;
+}
+
+.RespostaCard.C .QuadradoDaLetra {
+    background: var(--C);
+    box-shadow:2px 6px 0 var(--C2);
+}
+
+.RespostaCard.C {
+    background: var(--C);
+    box-shadow:0 6px 0 var(--C2);
+    border-left: none;
+    border-bottom: none;
+    padding-left: 55px;
+    margin-right: 40px;
+}
+
+.RespostaCard.D .QuadradoDaLetra {
+    background: var(--D);
+    box-shadow:6px 4px 0 var(--D2);
+}
+
+.RespostaCard.D {
+    background: var(--D);
+    box-shadow:0px 6px 0 var(--D2);
+    border-bottom: none;
+    border-right: none;
+    padding-right: 55px;
+}
+
+.RespContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.RespContainer .Baixo {
+    margin-top: 20px;
+}
+
+.RespContainer .Baixo,
+.RespContainer .Topo {
+    display: flex;
+    width: 80%;
+}
+
+
+/*=-=========================================================================*/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+footer .Voltar {
+    height: 40px;
+    padding: 10px;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+footer .Voltar:hover {
+    background: var(--button_Hover);
+}
+/**/
+.RespCerta {
+    display: flex;
+    position: absolute;
+    top: -60px;
+    left: 46%;
+    background: var(--Footer);
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.RespCerta .bottom {
+    display: flex;
+    margin-top: 5px;
+}
+
+.Resp::before {
+    content: "";
+    display: block;
+    height: 12px;
+    width: 12px;
+    background: var(--Branco);
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transform: scale(0);
+    transition: .5s;
+}
+.Resp:checked::before {
+    transform: scale(1);
+}
+
+.Resp.a,
+.Resp.b,
+.Resp.c,
+.Resp.d {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    border: none;
+    outline: none;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    -webkit-appearance: none;
+    margin: 2px;
+    position: relative;
+}
+
+.Resp.a {background-color: var(--A);}
+.Resp.b {background-color: var(--B);}
+.Resp.c {background-color: var(--C);}
+.Resp.d {background-color: var(--D);}
+
+/**/
+.Ferramentas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ferramentas button {
+    background: transparent;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+.Ferramentas button:hover {
+    background: var(--button_Hover);
+}
+#Categoria {
+    background: transparent;
+    color: var(--Branco);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--AzulClaro);
+}
+#Categoria option {
+    color: var(--Preto);
+}
+
+/**/
+section {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    z-index: 3;
+}
+
+.ConfirmarContrucao {
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.ConfirmarContrucao input {
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--AzulClaro);
+    padding-left: 10px;
+}
+
+.ConfirmarContrucao .label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ConfirmarContrucao .botoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ConfirmarContrucao button {
+    padding: 10px;
+    background: transparent;
+    border: none;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.ConfirmarContrucao button::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+}
+.ConfirmarContrucao button::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+}
+.ConfirmarContrucao button:hover::after,
+.ConfirmarContrucao button:hover::before {transform: scaleX(1);}
+
+.ConfirmarContrucao button::after,
+.ConfirmarContrucao button::before {
+    background: linear-gradient(to right, var(--B),var(--C));
+}
+.ConfirmarContrucao button.confirmar::after,
+.ConfirmarContrucao button.confirmar::before {
+    background: linear-gradient(to right, var(--A),var(--D));
+}

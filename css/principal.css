@@ -1,0 +1,81 @@
+body {
+    background: var(--Preto);
+}
+
+.btenter {
+    border-radius: 30px;
+    width: 200px;
+    height: 90px;
+    background-color: #C9416F;
+    color: white;
+    text-align: center;
+}
+
+
+.Quizes {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.QuizCard img {
+    border-radius: 10px;
+}
+
+.QuizCard {
+    min-height: fit-content;
+    min-width: 156px;
+    max-height: fit-content;
+    max-width: 156px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+    background: linear-gradient(to left, var(--A),var(--B),var(--C),var(--D));
+    transition: transform .3s ease-in-out;
+}
+
+.QuizCard h3 {
+    text-overflow: ellipsis;
+    max-width: 120px;
+    overflow: hidden;
+}
+
+.QuizCard:hover {
+    transform: rotateZ(-30deg);
+}
+
+/*pesquisa*/
+.pesquisa {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.pesquisa input {
+    height: 40px;
+    background: transparent;
+    border: none;
+    padding-left: 10px;
+    border-bottom: 2px solid var(--Branco);
+    outline: none;
+}
+.pesquisa label {position: relative;}
+.pesquisa label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    width: 100%;
+    height: 2px;
+    transform-origin: center;
+    transform: scaleX(0);
+    background: linear-gradient(to right, var(--A),var(--B),var(--C),var(--D));
+    transition: transform .5s ease-in-out;
+}
+
+.pesquisa:hover label::before {
+    transform: scaleX(1);
+}

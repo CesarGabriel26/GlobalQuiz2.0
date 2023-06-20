@@ -1,0 +1,256 @@
+body {
+    background: var(--Preto);
+}
+
+header {
+    height: 100px;
+    background: var(--Footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main {
+    height: calc(100% - 100px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Imagem {
+    min-height: 200px;
+    min-width: 250px;
+    max-height: 200px;
+    max-width: 250px;
+    border-bottom: 2px solid var(--Amarelo);
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+
+::placeholder {
+    color: var(--Textos);
+}
+
+#Pergunta {
+    width: 80%;
+    height: 95%;
+    text-align: center;
+    background: transparent;
+    border: none;
+    resize: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*========================================================================================================*/
+.RespostaCard {
+    border: 1px solid var(--Preto);
+    height: 100px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.RespostaCard:hover .QuadradoDaLetra {
+    border-left: 2px solid var(--Branco);
+    border-bottom: 2px solid var(--Branco);
+}
+
+.RespostaCard.B:hover .QuadradoDaLetra,
+.RespostaCard.D:hover .QuadradoDaLetra {
+    border: none;
+    border-right: 2px solid var(--Branco);
+    border-top: 2px solid var(--Branco);
+}
+
+.RespostaCard:hover {
+    border: 2px solid var(--Branco);
+}
+
+.Letra {
+    position: absolute;
+    left: -7px;
+    top: 35px;
+    color: var(--Textos);
+}
+
+.RespostaCard .QuadradoDaLetra {
+    position: absolute;
+    left: -36px;
+    top: 14px;
+    height: 70px;
+    width: 70px;
+    transform-origin: center;
+    transform: rotateZ(45deg);
+}
+
+.RespostaCard .Inp {
+    width: 445px;
+    height: 98px;
+    background: transparent;
+    border: none;
+    text-align: center;
+    resize: none;
+    overflow: hidden;
+    color: var(--Textos);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RespostaCard.B .QuadradoDaLetra,
+.RespostaCard.D .QuadradoDaLetra {
+    left: auto;
+    right: -36px;
+    top: 14px;
+}
+
+.RespostaCard.B .Letra,
+.RespostaCard.D .Letra {
+    left: auto;
+    right: -7px;
+    top: 35px;
+}
+
+
+.RespostaCard.A .QuadradoDaLetra {
+    background: var(--A);
+}
+
+.RespostaCard.A {
+    background: var(--A);
+    border-left: none;
+    padding-left: 55px;
+    margin-right: 40px;
+}
+
+.RespostaCard.B .QuadradoDaLetra {
+    background: var(--B);
+}
+
+.RespostaCard.B {
+    background: var(--B);
+    border-right: none;
+    padding-right: 55px;
+}
+
+.RespostaCard.C .QuadradoDaLetra {
+    background: var(--C);
+}
+
+.RespostaCard.C {
+    background: var(--C);
+    border-left: none;
+    padding-left: 55px;
+    margin-right: 40px;
+}
+
+.RespostaCard.D .QuadradoDaLetra {
+    background: var(--D);
+}
+
+.RespostaCard.D {
+    background: var(--D);
+    border-right: none;
+    padding-right: 55px;
+}
+
+.RespContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.RespContainer .Baixo {
+    margin-top: 20px;
+}
+
+.RespContainer .Baixo,
+.RespContainer .Topo {
+    display: flex;
+    width: 80%;
+}
+/**/
+#TelaFInal {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+}
+#TelaFInal button {
+    height: 40px;
+    width: 200px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--D);
+    transition: .2s ease-in-out;
+    font-weight: bolder;
+    font-size: 25px;
+}
+#TelaFInal button:hover {
+    background: var(--button_Hover);
+    color: var(--Preto);
+}
+
+.Container {
+    position: relative; 
+    animation: GalaxyRotation 1s linear 0s normal forwards;
+    display: flex;
+    flex-direction: column;
+}
+#Trofeu{
+    height: 200px;
+}
+#BandeiraPrincipal {
+    background-image: url("../img/bandeira muito acerto.png");
+    position: absolute;
+    left: -41px;
+    width: 281px;
+    height: 62px;
+    background-size: 100% 100%;
+    bottom: 0;
+}
+#BandeiraSegundaria {
+    background-image: url("../img/bandeira muito erro.png");
+    position: absolute;
+    left: -11px;
+    bottom: -50px;
+    height: 58px;
+    width: 223px;
+    background-size: 100% 100%;
+}
+#BandeiraPrincipal,
+#BandeiraSegundaria {
+    display: flex;
+    justify-content: center;
+}
+#BandeiraPrincipal p,
+#BandeiraSegundaria p {
+    margin-top: 12px;
+    color: #0673e4;
+}
+
+@keyframes GalaxyRotation {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}

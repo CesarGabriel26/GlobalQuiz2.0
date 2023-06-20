@@ -1,0 +1,85 @@
+.cabecalho {
+    width: 100%;
+    background-color: var(--Header);
+    height: 100px;
+    display: flex;
+    padding: 20px;
+    box-shadow: 0px 0px 15px var(--Preto);
+    justify-content: space-between;
+    text-align: end;
+    backdrop-filter: blur(20px);
+    color: var(--Branco);
+}
+
+.img-cabecalho {
+    width: 150px;
+    margin-right: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho .botao {
+    text-decoration: none;
+    color: var(--Branco);
+    font-weight: 700;
+    margin: 15px;
+    border-radius: 30px;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    padding: 8px;
+    transition: .3s ease-in-out;
+}
+.cabecalho .botao:hover {
+    background: var(--Branco);
+    color: var(--Preto);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li a{
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10;
+    width: 100%;
+    height: 2px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+}
+
+nav ul li a.A::before{
+    background: var(--A);
+}
+nav ul li a.B::before{
+    background: var(--B);
+}
+nav ul li a.C::before{
+    background: var(--C);
+}
+nav ul li a.D::before{
+    background: var(--D);
+}
+
+nav ul li:hover a:before{
+    transform-origin: left;
+    transform: scaleX(1);
+}

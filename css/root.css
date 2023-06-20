@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+:root {
+    /* Solidas */
+    --Azul: #27355E;
+    --Roxo: #823679;
+    --Rosa: #C9416F;
+    --Salmao: #F35D5D;
+    --Amarelo: #F9D949;
+    --AzulClaro: #B2DEEC;
+    --Branco: #E0DAED;/*E0DAED*/
+    --Preto: #1a1a1a;
+
+    /**/
+    --Footer: #232223;
+    --Header: #232223;
+
+    /**/
+    --button_Hover:#e0daed97;
+
+    /**/
+    --Textos: rgb(255, 255, 255);
+
+    /*Cores das resposatas*/
+    --A: #389e37;
+    --A2: #297328;
+    --B: #e47c06;
+    --B2: #a36722;
+    --C: #FF3131;
+    --C2: #962323;
+    --D: #004AAD;
+    --D2:#153c6f;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--Branco);
+}
+
+body {
+    background-color: var(--Preto);
+}

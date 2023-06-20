@@ -1,0 +1,72 @@
+<!DOCTYPE html5>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Quiz</title>
+
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/Jogar.css">
+
+    <link rel="shortcut icon" href="../Img/Globo.png" type="image/x-icon">
+</head>
+
+
+<body>
+
+    <header>
+        <p readonly  id="Pergunta"></p>
+    </header>
+
+    <main>
+        <img id="Imagem" src="" alt="Imagem escolhida">
+
+        <div class="RespContainer">
+            <div class="Topo">
+                <div onclick="Responder(0)" class="RespostaCard A">
+                    
+                    <div class="QuadradoDaLetra"></div>
+                    <p class="Letra">A</p>
+                    <p  class="Inp" id="RespostaA" ></p>
+                </div>
+                <div onclick="Responder(1)" class="RespostaCard B">
+                    
+                    <div class="QuadradoDaLetra"></div>
+                    <p class="Letra">B</p>
+                    <p  class="Inp" id="RespostaB" ></p>
+                </div>
+            </div>
+            <div class="Baixo">
+                <div onclick="Responder(2)" class="RespostaCard C">
+                    
+                    <div class="QuadradoDaLetra"></div>
+                    <p class="Letra">C</p>
+                    <p  class="Inp" id="RespostaC" ></p>
+                </div>
+                <div onclick="Responder(3)" class="RespostaCard D">
+                    
+                    <div class="QuadradoDaLetra"></div>
+                    <p class="Letra">D</p>
+                    <p  class="Inp" id="RespostaD" ></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="TelaFInal">
+        <div class="Container">
+            <a href="principal.html"><button>Voltar</button></a>
+            <img id="Trofeu" src="../img/Trofeu vitoria.png">
+            <div id="BandeiraPrincipal"><p>asdad</p></div>
+            <div id="BandeiraSegundaria"><p>asdad</p></div>
+        </div>
+    </section>
+
+    <script src="../js/Dados.js"></script>
+    <script src="../js/Jogar.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

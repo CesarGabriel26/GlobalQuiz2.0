@@ -1,0 +1,131 @@
+<!DOCTYPE html5>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Quiz</title>
+
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/Editor.css">
+
+    <link rel="shortcut icon" href="../Img/Globo.png" type="image/x-icon">
+</head>
+
+
+<body>
+
+    <header>
+        <textarea placeholder="Pergunta aqui" id="Pergunta"></textarea>
+    </header>
+
+    <main>
+        <input type="file" id="ImagemINP">
+        <img id="Imagem" src="" alt="Imagem escolhida">
+
+        <div class="RespContainer">
+            <div class="Topo">
+                <div class="RespostaCard A">
+
+                    <div class="QuadradoDaLetra"></div>
+                    <p class="Letra">A</p>
+                    <textarea placeholder="Resposta Aqui" class="Inp" id="RespostaA"></textarea>
+                </div>
+                <div class="RespostaCard B">
+                    <div class="QuadradoDaLetra"></div>
+                    <p class="Letra">B</p>
+                    <textarea placeholder="Resposta Aqui" class="Inp" id="RespostaB"></textarea>
+                </div>
+            </div>
+            <div class="Baixo">
+                <div class="RespostaCard C">
+
+                    <div class="QuadradoDaLetra"></div>
+                    <p class="Letra">C</p>
+                    <textarea placeholder="Resposta Aqui" class="Inp" id="RespostaC"></textarea>
+                </div>
+                <div class="RespostaCard D">
+                    <div class="QuadradoDaLetra"></div>
+                    <p class="Letra">D</p>
+                    <textarea placeholder="Resposta Aqui" class="Inp" id="RespostaD"></textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="Confirm">
+        <div class="ConfirmarContrucao">
+            <input type="text" placeholder="Nomeie seu quiz" id="QuizName">
+            <input type="text" placeholder="De uma capa ao seu quiz" id="LinkImagem">
+
+            <div class="categoria">
+                <label for="Categoria">Adicione uma caregorai</label>
+                <select id="Categoria">
+                    <option selected value="BIOLOGIA">CONHECIMENTOS GERAIS</option>
+                    <option value="BIOLOGIA">BIOLOGIA</option>
+                    <option value="FILOSOFIA">FILOSOFIA</option>
+                    <option value="FISICA">FÍSICA</option>
+                    <option value="GEOGRAFIA">GEOGRAFIA</option>
+                    <option value="HISTÓRIA">HISTÓRIA</option>
+                    <option value="LITERATURA">LITERATURA</option>
+                    <option value="MATEMATICA">MATEMÁTICA</option>
+                    <option value="QUIMICA">QUÍMICA</option>
+                    <option value="INGLES">INGLÊS</option>
+                    <option value="EXERCICIOS">EXERCÍCIOS</option>
+                </select>
+            </div>
+
+            <div class="botoes">
+                <button onclick="Voltar()">Voltar</button>
+                <button onclick="Build()" class="confirmar">Crie meu quiz!</button>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="RespCerta">
+            <h4>Respsota certa</h4>
+            <div class="bottom">
+                <input checked type="radio" name="Resp" id="Certo_RespostaA" class="Resp a">
+                <input type="radio" name="Resp" class="Resp b" id="Certo_RespostaB">
+                <input type="radio" name="Resp" class="Resp c" id="Certo_RespostaC">
+                <input type="radio" name="Resp" class="Resp d" id="Certo_RespostaD">
+            </div>
+        </div>
+
+        <a title="Voltar a pagina inicial" href="principal.html"><button class="Voltar">Voltar</button></a>
+        <div class="Ferramentas">
+
+            <button title="Pagina anterior" onclick="Befote_After_PAge(-1)">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </button>
+            <button title="Salvar e adicionar Nova pagina" onclick="AddPage()">
+                <ion-icon name="add-outline"></ion-icon>
+            </button>
+
+            <button title="Construir quiz" onclick="ValidarBuild()">
+                <ion-icon name="hammer-outline"></ion-icon>
+            </button>
+            <button title="Numero de paginas salvas" id="NumeroDeQuestoes">
+                <p>10</p>
+            </button>
+
+            <button title="Remover pagina atual" onclick="RemovePage()">
+                <ion-icon name="remove-outline"></ion-icon>
+            </button>
+            <button title="Proxima pagina" onclick="Befote_After_PAge(1)">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+                </ion-icon>
+            </button>
+
+        </div>
+        <object data="../Img/GlobalQuizAnimada.svg" class="Logo"></object>
+    </footer>
+
+    <script src="../js/CriarQuiz.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+body{
+    background-color: var(--Preto);
+    align-items: center;
+}
+
+main {
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divlogin{
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    background: var(--Salmao);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.alinhar {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    margin-top: 25px;
+}
+
+.alinhar input{
+    padding-left: 10px;
+    height: 40px;
+    width: 300px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--A2);
+}
+.alinhar label {
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    transition: .3s ease-in-out;
+}
+
+.alinhar input:focus + label,
+.alinhar input:not(:placeholder-shown) + label {
+  top: -20px;
+  font-size: 12px;
+  color: var(--B);
+}
+
+.botoes {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.botoes button {
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: var(--Branco);
+    color: var(--Preto);
+}
