@@ -27,7 +27,6 @@ function LoadQuizData() {
     AllQuizes.forEach(data => {
         if (data.QuizNome == localStorage.getItem('QuizAtual')) {
             QuizData = data.quizData
-            console.log(data.quizData);
             Load(QuizData[PaginaAtual])
         }
     })
@@ -122,5 +121,6 @@ function FimDeJogo(){
             console.log(Usuario.Pontuacao);
         }
     })
+    localStorage.setItem('GlobalQuizUsers',JSON.stringify(Usuarios))
 }
 

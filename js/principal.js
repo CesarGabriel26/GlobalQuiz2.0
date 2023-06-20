@@ -1,4 +1,3 @@
-let Quizes = document.getElementById('Quizes')
 let Pesquisa = document.getElementById('Pesquisar')
 
 setInterval(Pesquisar, 200);
@@ -12,12 +11,10 @@ const card = (QUiz) => `
 LoadContainer()
 
 function LoadContainer() {
-    Quizes.innerHTML = ""
-
-    var QuizData = JSON.parse(localStorage.getItem('GlobalQuiz_Quizes')) || BancoPErguntas ()
-
+    var QuizData = JSON.parse(localStorage.getItem('GlobalQuiz_Quizes')) || BancoPErguntas()
 
     QuizData.forEach(QUiz => {
+        var Quizes = document.getElementById(QUiz.categoria)
         Quizes.innerHTML += card(QUiz)
     });
 }
@@ -27,18 +24,18 @@ function Pesquisar() {
 
     var filtro = Pesquisa.value.toLowerCase()
 
-    Cards.forEach(Card =>{
+    Cards.forEach(Card => {
         var titulo = Card.getElementsByTagName('h3')[0].innerHTML.toLowerCase()
         if (titulo.indexOf(filtro) > -1) {
             Card.style.display = "flex"
-            
-        }else {
+
+        } else {
             Card.style.display = "none"
         }
     })
 }
 
 function GotoPlay(Quiz) {
-    localStorage.setItem('QuizAtual',Quiz)
+    localStorage.setItem('QuizAtual', Quiz)
     location.href = 'jogar.html'
 }

@@ -11,12 +11,25 @@ body {
     text-align: center;
 }
 
+.container {
+    padding: 10px;
+}
 
 .Quizes {
     padding: 20px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    min-height: 280px;
+}
+
+.Quizes {
+    border-top: 2px solid var(--AzulClaro);
+}
+
+.container h2 {
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .QuizCard img {
@@ -26,7 +39,7 @@ body {
 .QuizCard {
     min-height: fit-content;
     min-width: 156px;
-    max-height: fit-content;
+    max-height: 199px;
     max-width: 156px;
     overflow: hidden;
     border-radius: 10px;

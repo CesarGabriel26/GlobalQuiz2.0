@@ -6,7 +6,7 @@ if (Users == null) {
 
 
 var Card = (user,Rank) => `
-<div class="Card Primeiro">
+<div class="Card">
     <img id="Foto" src="${user.foto}"
         alt="">
     <h1 id="Colocacao">${user.nome}</h1>
@@ -29,7 +29,6 @@ UsersShorted.sort(function(a, b){
 
 localStorage.setItem('GlobalQuizUsers',JSON.stringify(Users))
 
-console.log(UsersShorted);
 
 function LoadRank() {
     Rank.innerHTML = ""
