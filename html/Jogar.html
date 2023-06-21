@@ -16,7 +16,7 @@
 <body>
 
     <header>
-        <p readonly  id="Pergunta"></p>
+        <p readonly id="Pergunta"></p>
     </header>
 
     <main>
@@ -25,30 +25,30 @@
         <div class="RespContainer">
             <div class="Topo">
                 <button onclick="Responder(0)" class="RespostaCard A">
-                    
+
                     <div class="QuadradoDaLetra"></div>
                     <p class="Letra">A</p>
-                    <p  class="Inp" id="RespostaA" ></p>
+                    <p class="Inp" id="RespostaA"></p>
                 </button>
                 <button onclick="Responder(1)" class="RespostaCard B">
-                    
+
                     <div class="QuadradoDaLetra"></div>
                     <p class="Letra">B</p>
-                    <p  class="Inp" id="RespostaB" ></p>
+                    <p class="Inp" id="RespostaB"></p>
                 </button>
             </div>
             <div class="Baixo">
                 <button onclick="Responder(2)" class="RespostaCard C">
-                    
+
                     <div class="QuadradoDaLetra"></div>
                     <p class="Letra">C</p>
-                    <p  class="Inp" id="RespostaC" ></p>
+                    <p class="Inp" id="RespostaC"></p>
                 </button>
                 <button onclick="Responder(3)" class="RespostaCard D">
-                    
+
                     <div class="QuadradoDaLetra"></div>
                     <p class="Letra">D</p>
-                    <p  class="Inp" id="RespostaD" ></p>
+                    <p class="Inp" id="RespostaD"></p>
                 </button>
             </div>
         </div>
@@ -58,15 +58,30 @@
         <div class="Container">
             <a href="principal.html"><button>Voltar</button></a>
             <img id="Trofeu" src="../img/Trofeu vitoria.png">
-            <div id="BandeiraPrincipal"><p>asdad</p></div>
-            <div id="BandeiraSegundaria"><p>asdad</p></div>
+            <div id="BandeiraPrincipal">
+                <p>asdad</p>
+            </div>
+            <div id="BandeiraSegundaria">
+                <p>asdad</p>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="painelAjuda" id="painelAjuda">
-            <button id="Elimina1" onclick="EliminaRespErrada(1)" class="Opc"><ion-icon name="close-circle-outline"></ion-icon> <h4>Elimina 1 respsotas erradas</h4></button>
-            <button id="Elimina2" onclick="EliminaRespErrada(2)" class="Opc"><ion-icon name="close-circle-outline"></ion-icon> <h4>Elimina 2 respsotas erradas</h4></>
+
+            <button id="Elimina1" onclick="EliminaRespErrada(1)" class="Opc">
+                <ion-icon name="close-circle-outline"></ion-icon>
+                <h4>Elimina 1 respsotas erradas</h4>
+                <h4 id="QUantidade1"></h4>
+            </button>
+
+            <button id="Elimina2" onclick="EliminaRespErrada(2)" class="Opc">
+                <ion-icon name="close-circle-outline"></ion-icon>
+                <h4>Elimina 2 respsotas erradas</h4>
+                <h4 id="QUantidade2"></h4>
+            </button>
+
         </div>
 
         <button onclick="MostrarAjuda()" title="Ajuda">

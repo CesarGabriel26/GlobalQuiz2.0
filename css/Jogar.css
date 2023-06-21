@@ -218,13 +218,14 @@ main {
 
 .RespostaCard.B .QuadradoDaLetra {
     background: var(--B);
-    box-shadow: 5px 6px 0 var(--B2);
+    box-shadow: 5px 6px 0px var(--B2);
     box-shadow: none;
 }
 
 .RespostaCard.B:disabled .QuadradoDaLetra,
 .RespostaCard.B:disabled{
     background: var(--B2);
+    box-shadow: none;
 }
 
 .RespostaCard.B {
