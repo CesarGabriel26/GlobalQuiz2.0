@@ -17,10 +17,10 @@ var FilePath = ""
 var QuizData = []
 var Respostas = []
 var PaginaAtual = 0
-     //0 Acertos V V Erros 1 //
-var Pontuacao = [0,0]
+//0 Acertos V V Erros 1 //
+var Pontuacao = [0, 0]
 
-AllQuizes = JSON.parse(localStorage.getItem('GlobalQuiz_Quizes')) || BancoPErguntas ()
+AllQuizes = JSON.parse(localStorage.getItem('GlobalQuiz_Quizes')) || BancoPErguntas()
 
 LoadQuizData()
 function LoadQuizData() {
@@ -44,6 +44,14 @@ function Load(Data) {
         RespostaC.innerHTML = Data.Respsotas[2][0]
         RespostaD.innerHTML = Data.Respsotas[3][0]
 
+        RespostaA.parentElement.disabled = false
+        RespostaB.parentElement.disabled = false
+        RespostaC.parentElement.disabled = false
+        RespostaD.parentElement.disabled = false
+
+        document.getElementById('Elimina1').disabled = false
+        document.getElementById('Elimina2').disabled = false
+
         Respostas[0] = Data.Respsotas[0][1]
         Respostas[1] = Data.Respsotas[1][1]
         Respostas[2] = Data.Respsotas[2][1]
@@ -54,7 +62,7 @@ function Load(Data) {
         if (Data.Img != "") {
             Imagem.style.display = "block"
             Imagem.src = Data.Img
-        }else {
+        } else {
             Imagem.style.display = "none"
         }
 
@@ -75,9 +83,9 @@ function Responder(ID) {
     }
 }
 
-function TocarAuduio(Audio = "",Estado = "") {
+function TocarAuduio(Audio = "", Estado = "") {
     if (oneshot) {
-        oneshot = false 
+        oneshot = false
         var a = document.createElement('audio')
         a.src = `../audio/${Audio}.mp3`
         a.play()
@@ -99,14 +107,14 @@ if (Users == null) {
 var usuarioatual = JSON.parse(localStorage.getItem("GlobalQuizUsuarioAtual"))
 
 
-function FimDeJogo(){
+function FimDeJogo() {
     oneshot = true
     document.getElementById('TelaFInal').style.display = "flex"
 
     if (Pontuacao[0] > Pontuacao[1]) {
         document.getElementById('BandeiraPrincipal').innerHTML = `<p>${Pontuacao[0]} Acertos</p>`
         document.getElementById('BandeiraSegundaria').innerHTML = `<p>${Pontuacao[1]} Erros</p>`
-        TocarAuduio("Vitoria",'Fim De Jogo')
+        TocarAuduio("Vitoria", 'Fim De Jogo')
     } else {
         document.getElementById('Trofeu').src = "../img/Trofeu derrota.png"
 
@@ -115,17 +123,60 @@ function FimDeJogo(){
 
         document.getElementById('BandeiraSegundaria').innerHTML = `<p>${Pontuacao[0]} Acertos</p>`
         document.getElementById('BandeiraSegundaria').style.backgroundImage = 'url("../img/bandeira muito acerto.png")'
-        TocarAuduio("derrota",'Fim De Jogo')
+        TocarAuduio("derrota", 'Fim De Jogo')
     }
 
     Usuarios = JSON.parse(localStorage.getItem('GlobalQuizUsers'))
-    Usuarios.forEach(Usuario =>{
+    Usuarios.forEach(Usuario => {
         if (usuarioatual.Nome == Usuario.nome && usuarioatual.Email == Usuario.email) {
             console.log(Usuario);
             Usuario.Pontuacao += Pontuacao[0]
             console.log(Usuario.Pontuacao);
         }
     })
-    localStorage.setItem('GlobalQuizUsers',JSON.stringify(Usuarios))
+    localStorage.setItem('GlobalQuizUsers', JSON.stringify(Usuarios))
 }
 
+// painelAjuda
+let painelAjuda = document.getElementById('painelAjuda')
+function MostrarAjuda() {
+    if (painelAjuda.style.display == 'none') {
+        painelAjuda.style.display = 'block'
+    } else {
+        painelAjuda.style.display = 'none'
+    }
+}
+
+function EliminaRespErrada(Quantidade) {
+    for (let num = 0; num < Quantidade; num++) {
+        Elimina()
+    }
+
+    document.getElementById('Elimina1').disabled = true
+    document.getElementById('Elimina2').disabled = true
+
+    MostrarAjuda()
+}
+
+function Elimina() {
+    var jafoi = []
+
+    var i = parseInt(Math.random() * 4)
+    if (jafoi.indexOf(i) == -1 && QuizData[PaginaAtual].Respsotas[i][1] == false) {
+
+        if (i == 0) {
+            RespostaA.parentElement.disabled = true;
+        } else if (i == 1){
+            RespostaB.parentElement.disabled = true;
+        } else if (i == 2){
+            RespostaC.parentElement.disabled = true;
+        } else {
+            RespostaD.parentElement.disabled = true;
+        }
+
+        jafoi.push(i)
+        console.log(i);
+    } else {
+        Elimina()
+    }
+}

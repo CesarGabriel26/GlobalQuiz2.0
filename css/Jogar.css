@@ -9,10 +9,81 @@ header {
     justify-content: center;
     align-items: center;
 }
+/**/
+footer {
+    height: 50px;
+    width: 100%;
+    background: var(--Footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
+footer button {
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    font-size: 35px;
+    border: none;
+    outline: none;
+}
+footer button ion-icon,
+footer button{
+    transition: .5s ease-in-out;
+}
+footer button:hover ion-icon,
+footer button:hover {
+    background: var(--button_Hover);
+    color: var(--Preto);
+}
 
+footer .painelAjuda{
+    background: var(--Footer);
+    position: absolute;
+    top: -82;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: none;
+}
+
+footer .painelAjuda button{
+    height: fit-content;
+    width: fit-content;
+}
+footer .painelAjuda .Opc {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+footer .painelAjuda .Opc:hover h4,
+footer .painelAjuda .Opc:hover ion-icon{
+    transition: .5s ease-in-out;
+    color: var(--Preto);
+}
+
+footer .painelAjuda .Opc:disabled h4,
+footer .painelAjuda .Opc:disabled ion-icon{
+    transition: .5s ease-in-out;
+    color: red;
+}
+
+footer .painelAjuda .Opc:hover{
+    background: var(--button_Hover);
+}
+footer .painelAjuda .Opc h4 {
+    margin-left: 10px;
+}
+footer .painelAjuda .Opc {
+    font-size: 20px;
+    margin: 5px;
+}
+
+/**/
 main {
-    height: calc(100% - 100px);
+    height: calc(100% - 150px);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -55,6 +126,7 @@ main {
     display: flex;
     align-items: center;
     cursor: pointer;
+    border: none;
 }
 
 
@@ -89,6 +161,7 @@ main {
     width: 70px;
     transform-origin: center;
     transform: rotateZ(45deg);
+    z-index: -1;
 }
 
 .RespostaCard .Inp {
@@ -122,33 +195,60 @@ main {
 }
 
 
+
 .RespostaCard.A .QuadradoDaLetra {
     background: var(--A);
+    box-shadow:4px 6px 0 var(--A2);
+}
+
+.RespostaCard.A:disabled .QuadradoDaLetra,
+.RespostaCard.A:disabled{
+    background: var(--A2);
+    box-shadow: none;
 }
 
 .RespostaCard.A {
     background: var(--A);
+    box-shadow:0 6px 0 var(--A2);
     border-left: none;
     padding-left: 55px;
     margin-right: 40px;
+
 }
 
 .RespostaCard.B .QuadradoDaLetra {
     background: var(--B);
+    box-shadow: 5px 6px 0 var(--B2);
+    box-shadow: none;
+}
+
+.RespostaCard.B:disabled .QuadradoDaLetra,
+.RespostaCard.B:disabled{
+    background: var(--B2);
 }
 
 .RespostaCard.B {
     background: var(--B);
+    box-shadow:0 6px 0 var(--B2);
     border-right: none;
     padding-right: 55px;
 }
 
 .RespostaCard.C .QuadradoDaLetra {
     background: var(--C);
+    box-shadow:2px 6px 0 var(--C2);
+    box-shadow: none;
+}
+
+.RespostaCard.C:disabled .QuadradoDaLetra,
+.RespostaCard.C:disabled{
+    background: var(--C2);
+    box-shadow: none;
 }
 
 .RespostaCard.C {
     background: var(--C);
+    box-shadow:0 6px 0 var(--C2);
     border-left: none;
     padding-left: 55px;
     margin-right: 40px;
@@ -156,10 +256,17 @@ main {
 
 .RespostaCard.D .QuadradoDaLetra {
     background: var(--D);
+    box-shadow:6px 4px 0 var(--D2);
+}
+
+.RespostaCard.D:disabled .QuadradoDaLetra,
+.RespostaCard.D:disabled{
+    background: var(--D2);
 }
 
 .RespostaCard.D {
     background: var(--D);
+    box-shadow:0px 6px 0 var(--D2);
     border-right: none;
     padding-right: 55px;
 }
