@@ -42,6 +42,7 @@ console.log(AllQuizes);
 
 Imagem.addEventListener('click', () => {
     ImagemINP.click()
+    ImagemINP.files[0] = ""
 })
 
 if (ImagemINP) {

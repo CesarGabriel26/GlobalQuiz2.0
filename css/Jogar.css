@@ -24,7 +24,6 @@ main {
     min-height: 200px;
     min-width: 250px;
     max-height: 200px;
-    max-width: 250px;
     border-bottom: 2px solid var(--Amarelo);
     margin-bottom: 50px;
     cursor: pointer;

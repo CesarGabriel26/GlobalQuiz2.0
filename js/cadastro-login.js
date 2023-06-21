@@ -6,8 +6,8 @@ if (listaLogin == null) {
 }
 
 
-function validarCadastro(nome, email, senh, FotoLink) {
-    if (nome != '' && email != '' && senha != '' && FotoLink != "") {
+function validarCadastro(nome, email, senha,) {
+    if (nome != '' && email != '' && senha != '') {
         return true
     } else {
         return false
@@ -18,9 +18,13 @@ function Cadastro() {
     var nomeCadastro = document.getElementById("nome").value
     var emailCadastro = document.getElementById("email").value
     var senhaCadastro = document.getElementById("senha").value
-    var FotoLink = document.getElementById('FotoLink').value
+    var FotoLink = '../img/Capa dos quizes.png'
 
-    var possoCadastrar = validarCadastro(nomeCadastro, emailCadastro, senhaCadastro, FotoLink)
+    if (document.getElementById('FotoLink').value != "") {
+        FotoLink = document.getElementById('FotoLink').value
+    }
+
+    var possoCadastrar = validarCadastro(nomeCadastro, emailCadastro, senhaCadastro)
     if (possoCadastrar == false) {
         alert('Verifique os dados antes de cadastrar')
         return

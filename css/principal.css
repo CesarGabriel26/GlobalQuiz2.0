@@ -36,6 +36,8 @@ body {
     border-radius: 10px;
 }
 
+
+
 .QuizCard {
     min-height: fit-content;
     min-width: 156px;
@@ -52,9 +54,10 @@ body {
 }
 
 .QuizCard h3 {
-    text-overflow: ellipsis;
     max-width: 120px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
 }
 
 .QuizCard:hover {

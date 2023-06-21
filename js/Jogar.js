@@ -51,7 +51,12 @@ function Load(Data) {
 
         Pergunta.innerHTML = Data.Pergunta
 
-        Imagem.src = Data.Img
+        if (Data.Img != "") {
+            Imagem.style.display = "block"
+            Imagem.src = Data.Img
+        }else {
+            Imagem.style.display = "none"
+        }
 
         oneshot = true
     }

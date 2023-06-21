@@ -1,7 +1,12 @@
+
+
 .Card {
+    transition: .5s ease-in-out;
     display: flex;
     align-items: center;
     border-bottom: 2px solid var(--Header);
+    padding-left: 20px;
+    padding-right: 40px;
 }
 
 .Card.Primeiro {
@@ -14,11 +19,18 @@
 .Card #Foto {
     height: 100px;
     width: 100px;
+    margin-right: 40px;
 }
 
-.Card #Colocacao {
-    margin-left: 40px;
+.Card #Colocacao,
+.Card #nome {
     margin-right: 40px;
+}
+
+.Card #nome {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .Card #Clasificacao {
