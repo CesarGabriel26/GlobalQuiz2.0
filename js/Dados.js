@@ -1,7 +1,7 @@
 var dados = [
   {
       "QuizNome": "Perguntas de conhecimentos gerais",
-      "Foto": "../img/Capa dos quizes.png",
+      "Foto": "../Img/Capa dos quizes.png",
       "categoria": "CONHECIMENTOS_GERAIS",
       "quizData": [
           {
@@ -228,7 +228,7 @@ var dados = [
   },
   {
       "QuizNome": "teoria da evolução",
-      "Foto": "../img/Capa dos quizes.png",
+      "Foto": "../Img/Capa dos quizes.png",
       "categoria": "BIOLOGIA",
       "quizData": [
           {
@@ -323,7 +323,7 @@ var dados = [
   },
   {
       "QuizNome": "exercícios de Filosofia",
-      "Foto": "../img/Capa dos quizes.png",
+      "Foto": "../Img/Capa dos quizes.png",
       "categoria": "FILOSOFIA",
       "quizData": [
           {

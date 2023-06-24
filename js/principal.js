@@ -37,5 +37,5 @@ function Pesquisar() {
 
 function GotoPlay(Quiz) {
     localStorage.setItem('QuizAtual', Quiz)
-    location.href = 'jogar.html'
+    location.href = 'Jogar.html'
 }

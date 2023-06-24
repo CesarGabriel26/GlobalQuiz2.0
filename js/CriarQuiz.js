@@ -245,7 +245,7 @@ function Build() {
 
     //Aqui carrecamos a imagem padrão do quiz / capa
 
-    var img = "../img/Capa dos quizes.png"
+    var img = "../Img/Capa dos quizes.png"
     
     //Checamos se o valor do link não é vasio
     if (Link.value != "") {

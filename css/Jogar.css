@@ -324,7 +324,7 @@ main {
     height: 200px;
 }
 #BandeiraPrincipal {
-    background-image: url("../img/bandeira muito acerto.png");
+    background-image: url("../Img/bandeira muito acerto.png");
     position: absolute;
     left: -41px;
     width: 281px;
@@ -333,7 +333,7 @@ main {
     bottom: 0;
 }
 #BandeiraSegundaria {
-    background-image: url("../img/bandeira muito erro.png");
+    background-image: url("../Img/bandeira muito erro.png");
     position: absolute;
     left: -11px;
     bottom: -50px;

@@ -18,7 +18,7 @@ function Cadastro() {
     var nomeCadastro = document.getElementById("nome").value
     var emailCadastro = document.getElementById("email").value
     var senhaCadastro = document.getElementById("senha").value
-    var FotoLink = '../img/Capa dos quizes.png'
+    var FotoLink = '../Img/Capa dos quizes.png'
 
     if (document.getElementById('FotoLink').value != "") {
         FotoLink = document.getElementById('FotoLink').value

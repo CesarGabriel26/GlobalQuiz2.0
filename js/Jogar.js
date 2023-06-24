@@ -176,14 +176,14 @@ function FimDeJogo() {
     } else {
         //se ouver mais erros
         //Trocamos o trofeu inteiro para o quebrado
-        document.getElementById('Trofeu').src = "../img/Trofeu derrota.png"
+        document.getElementById('Trofeu').src = "../Img/Trofeu derrota.png"
 
         //setamos a bandeira maior como a de erros
         document.getElementById('BandeiraPrincipal').innerHTML = `<p>${Pontuacao[1]} Erros</p>`
-        document.getElementById('BandeiraPrincipal').style.backgroundImage = 'url("../img/bandeira muito erro.png")'
+        document.getElementById('BandeiraPrincipal').style.backgroundImage = 'url("../Img/bandeira muito erro.png")'
         // e a menor como a de acertos ja que ouveram menos acertos
         document.getElementById('BandeiraSegundaria').innerHTML = `<p>${Pontuacao[0]} Acertos</p>`
-        document.getElementById('BandeiraSegundaria').style.backgroundImage = 'url("../img/bandeira muito acerto.png")'
+        document.getElementById('BandeiraSegundaria').style.backgroundImage = 'url("../Img/bandeira muito acerto.png")'
         
         //E tocamos o som de derrota com o estado 'Fim de jogo' para não adicionar +1 na pagina
         TocarAuduio("derrota", 'Fim De Jogo')
