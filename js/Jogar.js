@@ -41,8 +41,10 @@ var AllQuizes = JSON.parse(localStorage.getItem('GlobalQuiz_Quizes')) || BancoPE
 
 //Chamando a função para carregar o quiz
 
-LoadQuizData()
 
+LoadQuizData()
+var tempo = 30
+document.getElementById('Timer').innerHTML = tempo
 
 function LoadQuizData() {
     //Fazendo um loop por todos os quizes registrados
@@ -57,9 +59,24 @@ function LoadQuizData() {
             Load(QuizData[PaginaAtual])
         }
     })
+
+    setInterval(() => {
+        tempo--
+        if (tempo < 0) {
+            Pontuacao[1] += 1
+            TocarAuduio('Errado')
+            return
+        }else if (tempo < 10) {
+            tempo = `0${tempo}`
+        }
+
+        document.getElementById('Timer').innerHTML = tempo
+        
+    }, 1000);
 }
 
 function Load(Data) {
+    tempo = 30
     //Primeiro verificamos se a pagina atual é igual a nossa quantidade de paginas em QuizData
     if (PaginaAtual == QuizData.length) {
         // Se for finalizamos o jogo chamando a função FimDeJogo

@@ -23,10 +23,6 @@ body {
     min-height: 280px;
 }
 
-.Quizes {
-    border-top: 2px solid var(--AzulClaro);
-}
-
 .container h2 {
     margin-left: 20px;
     margin-top: 10px;

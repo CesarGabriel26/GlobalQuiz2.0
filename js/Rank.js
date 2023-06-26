@@ -48,4 +48,5 @@ function LoadRank() {
         Rank.innerHTML += Card(user, i)
     })
 }
+
 LoadRank()
